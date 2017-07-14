@@ -1,0 +1,19 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber23 {
+
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		String P = scanner.next();
+		String A = scanner.next();
+		
+		String[] p = P.split(".");
+		String[] a = A.split(".");
+		
+		int[] p1 ={Integer.parseInt(p[0]),Integer.parseInt(p[1]),Integer.parseInt(p[2])};
+		int[] a1 ={Integer.parseInt(a[0]),Integer.parseInt(a[1]),Integer.parseInt(a[2])};
+		
+	}
+}

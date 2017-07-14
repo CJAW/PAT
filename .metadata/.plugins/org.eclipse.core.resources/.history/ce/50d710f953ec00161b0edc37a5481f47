@@ -1,0 +1,60 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber21 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		String text1 = scanner.nextLine();
+		String text2 = scanner.next();
+		boolean con = false;
+		int re=0;
+		if (text1 == "") {
+			System.out.println();
+
+		} else {
+
+			for (int i = 0; i < text1.length(); i++) {
+				
+				if(text1.charAt(i)>=43&&text1.charAt(i)<=46){
+					con=true;
+					re=i;
+					break;
+				}
+				
+				for (int j = 0; j < text2.length(); j++) {
+
+					
+					if (text1.charAt(i) == text2.charAt(j)) {
+						text2 = text2.replace(String.valueOf(text2.charAt(j)), "");
+						
+					}
+					if ((char)(text1.charAt(i)+32) == text2.charAt(j)) {
+						text2 = text2.replace(String.valueOf(text2.charAt(j)), "");
+					}
+				
+				}
+			}
+			
+			if (con == true) {
+
+				for (int k = re; k < text2.length(); k++) {
+					for(int m=0;m<text2.length();m++){
+						if (text2.charAt(k) >= 'A' && text2.charAt(k) <= 'Z') {
+							text2 = text2.replace(String.valueOf(text2.charAt(k)), "");
+							k--;
+						}
+					}
+					
+				}
+				
+			}
+			
+			System.out.println(text2);
+		}
+		scanner.close();
+	}
+}

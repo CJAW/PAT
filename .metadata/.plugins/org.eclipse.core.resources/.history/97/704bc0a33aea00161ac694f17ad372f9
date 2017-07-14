@@ -1,0 +1,40 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber16 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+		int b = 1;
+		String youngName = null;
+		String oldName = null;
+		int curr = 2014;
+		
+		for (int i = 0; i < num; i++) {
+
+			String name = scanner.next();
+			String birthday = scanner.next().substring(0,4);
+			int birthdayNum = Integer.parseInt(birthday);
+            int year = curr - birthdayNum;
+            if(year>0&&year<200){
+            	
+            	if(){
+            		
+            	}
+            	
+            	
+            }
+            
+			
+			
+
+		}
+
+		System.out.print(b + " " + oldName + " " + youngName);
+		scanner.close();
+
+	}
+}

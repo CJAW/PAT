@@ -1,0 +1,19 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber22 {
+
+	public static void main(String[] args){
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int num = scanner.nextInt();
+		String pic = scanner.next();
+		
+		
+		
+		
+		scanner.close();
+	}
+}

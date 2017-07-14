@@ -1,0 +1,45 @@
+package com.user.pat01;
+
+import java.text.SimpleDateFormat;
+import java.util.Scanner;
+
+public class PatNumber16 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		int num = scanner.nextInt();
+		int b = 1;
+		SimpleDateFormat format = new SimpleDateFormat("yyyy");
+		int currTime = Integer.parseInt(format.format(System.currentTimeMillis()));
+		int young = 1000;
+		int old = 1;
+		String youngName = null;
+		String oldName = null;
+		for (int i = 0; i < num; i++) {
+
+			String name = scanner.next();
+			String birthday = scanner.next().replace("/", "");
+			int birthdayNum = Integer.parseInt(birthday);
+            int time = currTime-birthdayNum;
+            System.out.println(time);
+			if (time<= 130 && time > 0) {
+				b += 1;
+				if(time>old){
+					old = time;
+					oldName = name;
+				}
+				if(time<young){
+					young = time;
+					youngName = name;
+				}
+			}
+
+		}
+
+		System.out.print(b + " " + oldName + " " + youngName);
+		scanner.close();
+
+	}
+}

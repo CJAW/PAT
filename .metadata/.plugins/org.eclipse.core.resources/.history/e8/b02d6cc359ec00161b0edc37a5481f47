@@ -1,0 +1,46 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber22 {
+
+	public static void main(String[] args){
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int num = scanner.nextInt();
+		String pic = scanner.next();
+		
+		double M = (double)num/2-num/2; 
+		
+		System.out.println(M);
+		for (int i = 0; i < num / 2; i++) {
+			if (i == 0) {
+				for (int b = 0; b < num; b++) {
+					System.out.print(pic);
+				}
+
+			}
+			System.out.println();
+			if (i >= 1 && i <= num/2 -2) {
+				System.out.print(pic);
+				for (int c = 0; c < num - 2; c++) {
+					System.out.print(" ");
+				}
+				System.out.print(pic);
+				System.out.println();
+				
+			}
+			
+			if (i == num / 2 - 1) {
+				for (int b = 0; b < num; b++) {
+					System.out.print(pic);
+				
+			}
+			}
+		}
+	
+	
+		scanner.close();
+	}
+}

@@ -1,0 +1,33 @@
+package com.user.pat01;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class PatNumber18 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		int N = scanner.nextInt();
+		int P = scanner.nextInt();
+		int[] number = new int[N];
+		int maxLength=0;
+		for (int i = 0; i < N; i++) {
+			int num = scanner.nextInt();
+			number[i] = num;
+		}
+		Arrays.sort(number);
+		
+		for(int i=0;i<number.length;i++){
+
+			if(number[i]*P>=number[number.length]-1){
+				maxLength++;
+			}
+			
+		}
+		
+		System.out.println(maxLength);
+		scanner.close();
+	}
+}

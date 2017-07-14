@@ -1,0 +1,13 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber20 {
+
+	public static void main(String[] args){
+		
+		Scanner scanner = new Scanner(System.in);
+		int peopleNum = scanner.nextInt();
+		
+	}
+}

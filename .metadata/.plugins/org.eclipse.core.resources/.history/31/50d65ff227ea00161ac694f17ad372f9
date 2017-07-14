@@ -1,0 +1,54 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber15 {
+	
+	public static void main(String[] args) {
+
+		Scanner str = new Scanner(System.in);
+		int total = str.nextInt();
+		String picture = str.next();
+	
+		int cap = (int) Math.sqrt((total+1)/2);
+		int b=0;
+		
+		for (int i = 1; i < cap; i++) {
+
+			for (int j = 0; j < i-1; j++) {
+				System.out.print(" ");
+			}
+
+			for (int k =0 ; k <cap*2+1-i*2; k++) {
+				System.out.print(picture);
+				b++;
+			}
+			System.out.println();
+		}
+		
+		
+
+		for (int i = 0; i < cap; i++) {
+			System.out.print(" ");
+		}
+
+		System.out.print(picture);
+		System.out.println();
+
+		for (int i = 1; i <= cap; i++) {
+
+			for (int j = 0; j < cap-i; j++) {
+				System.out.print(" ");
+			}
+
+			for (int k = 0; k < 2*i+1; k++) {
+				System.out.print(picture);
+				b++;
+			}
+			System.out.println();
+		}
+		System.out.println(total-b);
+		str.close();
+	}
+
+}

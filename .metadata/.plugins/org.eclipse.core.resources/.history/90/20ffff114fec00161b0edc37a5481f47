@@ -1,0 +1,40 @@
+package com.user.pat01;
+
+import java.util.Scanner;
+
+public class PatNumber21 {
+
+	public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String key = in.next();
+        String text = in.next();
+        int[] a = new int[26+10+1+4];//26字母10个数字,1个空格，(+ , - . （43~46）)
+        for(int i = 0;i<key.length();i++){
+            int index = index(key.charAt(i));
+            if(index>=0)
+                a[index] = 1;
+        }
+        for(int i = 0;i<text.length();i++){
+            char c = text.charAt(i);
+            int index = index(c);
+            if(a[index]!=0)
+                continue;
+            else if(c>='A'&&c<='Z'&&a[index('+')]!=0)
+                continue;
+            System.out.print(c);//说明这个键是好的
+        }
+    }
+    private static int index(char c){
+        if(c=='_')
+            return 0;
+        if(c>='a'&&c<='z')
+            return c-'a'+1;
+        if(c>='A'&&c<='Z')
+            return c-'A'+1;
+        if(c>='0'&&c<='9')
+            return 26+c-'0'+1;
+        if(c>=43&&c<=46)
+            return 26+10+1+c-43;
+        return -1;
+    }
+}
